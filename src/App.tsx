@@ -41,7 +41,19 @@ export default function App() {
         >
           <img src="/my-computer.png" className="w-12 h-12" alt="My Computer" />
           <span className="text-white text-[11px] mt-1 drop-shadow-md px-1 group-hover:bg-[#0b61ff] border border-transparent group-hover:border-white/30">
-            My Computer
+            Projects
+          </span>
+        </div>
+      </div>
+      <div className="p-4 flex flex-col gap-6 w-max">
+        <div 
+          className="flex flex-col items-center w-20 cursor-pointer group"
+          onDoubleClick={(e) => { e.stopPropagation(); toggleApp('about'); }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <img src="/resume-icon.jpg" className="w-12 h-12" alt="My Computer" />
+          <span className="text-white text-[11px] mt-1 drop-shadow-md px-1 group-hover:bg-[#0b61ff] border border-transparent group-hover:border-white/30">
+            About Shishir
           </span>
         </div>
       </div>
@@ -105,7 +117,7 @@ export default function App() {
       <div className="absolute bottom-0 w-full h-[30px] bg-gradient-to-b from-[#245edb] to-[#1941a5] flex items-center z-[3000] border-t border-white/20">
         <button 
           onClick={(e) => { e.stopPropagation(); setStartMenuOpen(!startMenuOpen); }}
-          className={`h-full px-4 flex items-center gap-1 italic font-bold text-white rounded-r-xl shadow-lg transition-all ${startMenuOpen ? 'brightness-75' : 'bg-gradient-to-b from-[#388e3c] to-[#2e7d32] hover:brightness-110'}`}
+          className={`h-full px-4 flex items-center gap-1 italic font-bold text-black rounded-r-xl shadow-lg transition-all ${startMenuOpen ? 'brightness-75' : 'bg-gradient-to-b from-[#388e3c] to-[#2e7d32] hover:brightness-110'}`}
         >
           <span className="text-xl not-italic">⊞</span> start
         </button>
